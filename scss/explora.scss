@@ -1,0 +1,57 @@
+.categoriaArticle {
+  font-size: 24px;
+  margin: 12px;
+  font-weight: 600;
+  color: $colorPrimario;
+}
+
+.contenedorArticulos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .cardArticle {
+    width: 360px;
+    height: 360px;
+    margin: 12px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px #00000038;
+    display: inline-block;
+
+    &:hover {
+      box-shadow: 0 5px 10px $colorPrimario;
+      transition: 0.3s;
+    }
+
+    .titleArticle {
+      font-weight: 600;
+      font-size: 16px;
+      color: #000000;
+      padding: 18px 12px 6px 12px;
+      margin: 0;
+    }
+
+    img {
+      width: 360px;
+      height: 190px;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+    }
+
+    .verMas {
+      font-weight: 600;
+      font-size: 14px;
+      height: 38px;
+      width: 120px;
+      background-color: #073E3E;
+      border-radius: 18px;
+      color: white;
+      box-sizing: border-box;
+      margin: 12px 17px 0 228px;
+      padding-top: 8px;
+      text-align: center;
+    }
+  }
+}

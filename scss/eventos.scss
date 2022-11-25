@@ -1,0 +1,26 @@
+#eventos-seccion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  #eventos {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px #00000038;
+    margin-right: 2rem;
+  }
+
+  @media only screen and (max-width : 600px) {
+
+    #eventos {
+      font-size: 12px;
+      margin-right: 0;
+      overflow-x: auto;
+      width: 320px;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+fieldset {
+  border-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+}
+
+form {
+  width: 420px;
+  margin: 25px;
+  display: inline-block;
+
+  label {
+    @include text-bold();
+
+    color: $colorPrimario;
+    display: inline-block;
+    margin: 24px 12px 6px 0;
+
+    &[for = 'aceptar'] {
+      display: inline-block;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    border-color: #00000038;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    display: inline-block;
+    outline: none;
+    width: 400px;
+    box-shadow: 0 2px 6px #00000038;
+
+    &:focus {
+      border-color: $colorPrimario;
+      border-width: 2px;
+    }
+  }
+
+  input {
+    height: 45px;
+    box-sizing: border-box;
+    padding: 0 12px;
+
+    &[type = 'checkbox'] {
+      width: 24px;
+      height: 24px;
+      border-color: $colorPrimario;
+      display: inline;
+      margin: 16px 12px;
+    }
+
+    &[type = 'reset'],
+    &[type = 'submit'] {
+      @include text-bold();
+
+      font-size: 16px;
+      color: $white;
+      width: 168px;
+      height: 45px;
+      background-color: $colorPrimario;
+      margin: 12px 24px 12px 0;
+      padding: 0;
+      display: inline;
+    }
+  }
+
+  select {
+    height: 45px;
+    padding: 0 12px;
+  }
+
+  textarea {
+    height: 110px;
+    margin: 0;
+  }
+
+  #newsletter {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+
+    label {
+      margin: 0;
+    }
+  }
+}
+
+.cajasContact {
+  width: 540px;
+  display: flex;
+  overflow: hidden;
+  margin-top: 30px;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .ilustration {
+    box-shadow: 0 3px 10px #00000038;
+    width: 500px;
+    border-radius: 20px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+
+  form {
+    margin: 0;
+    width: 350px;
+
+    label,
+    input,
+    select,
+    textarea {
+      margin: inherit auto;
+      width: 350px;
+    }
+  }
+
+  .cajasContact {
+    width: auto;
+    align-items: center;
+
+    .textContact {
+      text-align: center;
+      margin: 0;
+      width: 100%;
+    }
+
+    .ilustration {
+      margin: 25px 0;
+      width: 350px;
+    }
+  }
+}

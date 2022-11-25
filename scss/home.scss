@@ -1,0 +1,309 @@
+.portada {
+  margin-top: 80px;
+  margin-bottom: 100px;
+
+  .titlePortada {
+    font-weight: 700;
+    text-align: right;
+    color: #FFFFFF;
+    font-size: 60px;
+    text-shadow: 1px 1px 2px $colorPrimario;
+    margin: 12px;
+
+    @media only screen and (max-width : 600px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .carousel-item {
+    border-radius: 20px;
+    overflow: hidden;
+
+    .slide {
+      align-items: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // pisa el "d-block" de bootstrap para centrar
+      // el texto. NO BORRAR
+      display: flex !important;
+      justify-content: center;
+      height: 500px;
+
+      &.s1 {
+        background-image: url('../images/ImgPortada/Portada1.jpg');
+      }
+
+      &.s2 {
+        background-image: url('../images/ImgPortada/Portada2.jpg');
+      }
+
+      &.s3 {
+        background-image: url('../images/ImgPortada/Portada3.jpg');
+      }
+    }
+  }
+
+  @media only screen and (max-width : 600px) {
+    margin: 1rem 0;
+
+    .carousel-inner {
+      height: 500px;
+
+      .carousel-item {
+        height: 500px;
+      }
+    }
+  }
+}
+
+.titleNovedades {
+  font-weight: 600;
+  font-size: 36px;
+  color: #073E3E;
+  text-align: center;
+
+  @media only screen and (max-width : 1200px) {
+    font-size: 24px;
+    margin-top: 36px;
+  }
+}
+
+.titleSection {
+  font-weight: 600;
+  font-size: 36px;
+  color: #073E3E;
+
+  @media only screen and (max-width : 1200px) {
+    font-size: 24px;
+    margin-top: 36px;
+  }
+}
+
+.contenedorNovedades {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .cardNovedades {
+    width: 360px;
+    height: 360px;
+    margin: 12px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px #00000038;
+    display: inline-block;
+
+    &:hover {
+      box-shadow: 0 5px 10px $colorPrimario;
+      transition: 0.3s;
+    }
+
+    .titleArticle {
+      font-weight: 600;
+      font-size: 16px;
+      color: #000000;
+      padding: 18px 12px 6px 12px;
+      margin: 0;
+    }
+
+    img {
+      width: 360px;
+      height: 190px;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+    }
+
+    .verMas {
+      font-weight: 600;
+      font-size: 14px;
+      height: 38px;
+      width: 120px;
+      background-color: #073E3E;
+      border-radius: 18px;
+      color: white;
+      box-sizing: border-box;
+      margin: 12px 17px 0 228px;
+      padding-top: 8px;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width : 1200px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+#anuncios {
+  width: 600px;
+  height: 855px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 24px;
+  grid-template-areas: 'i1 i3'
+    'i2 i3'
+    'i4 i4';
+
+  #a1 {
+    grid-area: i1;
+    background-image: url(../images/Anuncios/A1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  #a2 {
+    grid-area: i2;
+    background-image: url(../images/Anuncios/A2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  #a3 {
+    grid-area: i3;
+    background-image: url(../images/Anuncios/A3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  #a4 {
+    grid-area: i4;
+    background-image: url(../images/Anuncios/A4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  .anuncio {
+    overflow: hidden;
+
+    h3 {
+      border-radius: 20px;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100%;
+      transition: 0.2s;
+      font-size: 16px;
+    }
+
+    &:hover {
+
+      h3 {
+        background-color: #333333AA;
+        color: #FFFFFF;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media only screen and (max-width : 600px) {
+    width: 360px;
+    height: 513px;
+    grid-gap: 12px;
+
+    #a1 {
+      width: 174px;
+      height: 163px;
+    }
+
+    #a2 {
+      width: 174px;
+      height: 163px;
+    }
+
+    #a3 {
+      width: 174px;
+      height: 338px;
+    }
+
+    #a4 {
+      width: 360px;
+      height: 163px;
+    }
+  }
+}
+
+.cardTopLeidos {
+  width: 550px;
+  height: 150px;
+  margin: 12px 0;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px #00000038;
+  display: flex;
+
+  &:hover {
+    box-shadow: 0 5px 10px $colorPrimario;
+    transition: 0.3s;
+  }
+
+  figure {
+    display: inline-block;
+    margin: 1rem;
+  }
+
+  .topLeidosText {
+    width: 380px;
+    height: 150px;
+    display: inline-block;
+  }
+
+  .timeArticle {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: right;
+    color: #073E3E;
+    display: block;
+    margin-top: 8px;
+    margin-right: 10px;
+  }
+
+  .titleArticle {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    padding: 16px 12px 6px 12px;
+    margin: 0;
+  }
+
+  @media only screen and (max-width : 600px) {
+    width: auto;
+    height: 150px;
+    justify-content: center;
+    margin: 1rem 0;
+
+    .topLeidosText {
+      width: 220px;
+      padding: 0;
+      margin: 0;
+      line-height: 1.2rem;
+    }
+
+    .titleArticle {
+      padding: 8px 10px 4px 10px;
+      font-size: 14px;
+    }
+
+    .timeArticle {
+      font-size: 12px;
+      margin-right: 12px;
+    }
+  }
+}

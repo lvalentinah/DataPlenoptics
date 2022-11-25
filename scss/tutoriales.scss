@@ -1,0 +1,60 @@
+.ilustration {
+  box-shadow: 0 3px 10px #00000038;
+  width: 500px;
+  border-radius: 20px;
+  margin: 0 25px;
+
+  @media only screen and (max-width : 600px) {
+    width: 350px;
+  }
+}
+
+#contenedorColumnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  .columnasArticulos {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 228px;
+    height: 66px;
+    padding: 0;
+    border-radius: 33px;
+    border-style: solid;
+    border-color: #073E3E;
+    border-width: 4px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #00000038;
+    padding: 12px;
+    margin: 16px;
+    display: inline-block;
+
+    a {
+      @include text-bold();
+
+      color: $colorPrimario;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: #073E3E;
+
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
