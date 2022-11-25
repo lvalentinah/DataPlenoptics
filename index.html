@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="DataPlenoptic" />
+    <meta
+      name="description"
+      content="Guía para el manejo de la cámara plenóptica"
+    />
+    <meta
+      name="keywords"
+      content="Raytrix Lytro BASLER"
+    />
+    <title>DataPlenoptic</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <figure>
+          <img src="./images/logo.png" alt="Logo" />
+        </figure>
+        <div class="btn-group">
+          <button
+            id="responsive-menu"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="hamburger-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end height-auto navigator">
+            <li><a href="./pages/explora.html">Explora</a></li>
+            <li><a href="./pages/tutoriales.html">Tutoriales</a></li>
+            <li><a href="./pages/resultados.html">Resultados</a></li>
+            <li><a href="./pages/preguntas.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a class="menu" href="./pages/explora.html">Explora</a></li>
+          <li><a class="menu" href="./pages/tutoriales.html">Tutoriales</a></li>
+          <li><a class="menu" href="./pages/resultados.html">Resultados</a></li>
+          <li><a class="menu" href="./pages/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div
+        class="portada"
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="slide s1 d-block w-100">
+              <h2 class="titlePortada">BIENVENIDO!</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slide s2 d-block w-100">
+              <h2 class="titlePortada">Aprende</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slide s3 d-block w-100">
+              <h2 class="titlePortada">Crea</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <h2 class="titleNovedades">Descubre</h2>
+        <div class="contenedorNovedades">
+        </article>
+        <article class="cardNovedades">
+          <img
+            src="./images/1.png"
+            alt="Imagen de Articulo"
+          />
+          <h3 class="titleArticle">Conceptos básicos</h3>
+          <p class="parrafo">
+            Aquí encontraras conceptos básicos para entender el 
+            funcionamiento de la cámara e información útil para que 
+            puedas trabajar con ella sin ningún problema. 
+          </p>
+          <div class="verMas"><a href="./pages/explora.html" >Ver más</a></div>
+        </article>
+          <article class="cardNovedades">
+            <img
+              src="./images/raytrix.jpg"
+              alt="Imagen de Articulo"
+            />
+            <h3 class="titleArticle">Mis primeros pasos con la Raytrix R42</h3>
+            <p class="parrafo">
+              Aquí encontraras un paso a paso sobre el manejo de la cámara 
+              y el software RxLive para que puedas sacar el mayor provecho 
+              de la Raytrix R42. 
+            </p>
+            <div class="verMas"><a href="./pages/tutoriales.html">Ver más</a></div>
+          </article>
+          <article class="cardNovedades">
+            <img
+              src="./images/mapap.png"
+              alt="Imagen de Articulo"
+            />
+            <h3 class="titleArticle">Conjuntos de datos y resultados</h3>
+            <p class="parrafo">
+              Aquí encontraras los conjuntos de datos tomados tanto de 
+              manera afocal como focal así como los resultados obtenidos 
+              tras utilizar Matlab y Meshlab… 
+            </p>
+            <div class="verMas"><a href="./pages/resultados.html">Ver más</a></div>
+          
+        </div>
+      </section>
+      <div class="contenerPagina">
+        <!--Seccion imágenes resultados-->
+
+        <aside id="anuncios">
+          <div id="a1" class="anuncio bordeImagen">
+            <h3>Pétalos de lantana<br>Vistos desde un microscopio<br>BASLER</h3>
+          </div>
+          <div id="a2" class="anuncio bordeImagen">
+            <h3>Roble rojo Americano<br>Mapa de profundidad<br>Lytro</h3>
+          </div>
+          <div id="a3" class="anuncio bordeImagen">
+            <h3>Guaje<br>Vista 3D<br>Raytrix</h3>
+          </div>
+          <div id="a4" class="anuncio bordeImagen">
+            <h3>Azalea<br>Vista desde un microscopio<br>BASLER</h3>
+          </div>
+          <div id="a5" class="anuncio bordeImagen">
+            <h3>Falso pimentero<br>Mapa de profundidad<br>Raytrix</h3>
+          </div>
+          <div id="a7" class="anuncio bordeImagen">
+            <h3>Ciprés de Monterrey<br>Vista 3D<br>Raytrix</h3>
+          </div>
+          <div id="a6" class="anuncio bordeImagen">
+            <h3>Helecho Macho<br>Visto desde un microscopio<br>BASLER</h3>
+          </div>
+                    
+        </aside>
+        <section>
+          <h2 class="titleSection">Recomendados</h2>
+          <article class="cardTopLeidos">
+            <figure>
+              <img src="./images/conf.png" width="130" height="130" alt="Imagen top más" />
+            </figure>
+            <div class="topLeidosText">
+              
+              <h3 class="titleArticle">Configuración de la cámara</h3>
+              <p class="parrafo">
+                La cámara que se utilizara en los siguientes 
+                instructivos es la Raytrix R42 y se trabajara con el software RxLive. 
+                Conocerás acerca de la configuración, la calibración y mucho más… 
+              </p>
+              <div class="verMas"><a href="./pages/configuracion.html">Ver más</a></div>
+            </div>
+          </article>
+          <article class="cardTopLeidos">
+            <figure>
+              <img src="./images/ImgArticulos/Top2.png" width="130" height="130" alt="Imagen top más" />
+            </figure>
+            <div class="topLeidosText">
+              
+              
+              <h3 class="titleArticle">Calibración de la Raytrix R42</h3>
+              <p class="parrafo">
+                Antes de iniciar a utilizar la cámara debe 
+                realizar la calibración de la cámara de acuerdo a su aplicación 
+                para garantizar buenos resultados
+              </p>
+              <div class="verMas"><a href="./pages/calibracion.html">Ver más</a></div>
+            </div>
+          </article>
+          <article class="cardTopLeidos">
+            <figure>
+              <img src="./images/vista.png" width="130" height="130" alt="Imagen top más" />
+            </figure>
+            <div class="topLeidosText">
+              
+              <h3 class="titleArticle">Vistas</h3>
+              <p class="parrafo">
+                Aquí podrá identificar y entender todas las pestañas, estas
+                cuales corresponden a las diferentes vistas que se tienen del objeto
+              </p>
+              <div class="verMas"><a href="./pages/vistas.html">Ver más</a></div>
+            </div>
+          </article>
+          <article class="cardTopLeidos">
+            <figure>
+              <img src="./images/Rxlive.png" width="130" height="130" alt="Imagen top más" />
+            </figure>
+            <div class="topLeidosText">
+              
+              <h3 class="titleArticle">Uso y funcionalidades de RxLive</h3>
+              <p class="parrafo">
+                El software RxLive le permitirá tener el 
+                control de la cámara plenóptica, capturar las fotografías, realizar el procesamiento y 
+                guardar sus resultados. 
+              </p>
+              <div class="verMas"><a href="./pages/usorxlive.html">Ver más</a></div>
+            </div>
+          </article>
+          <article class="cardTopLeidos">
+            <figure>
+              <img src="./images/pros.png" width="130" height="130" alt="Imagen top más" />
+            </figure>
+            <div class="topLeidosText">
+              
+              <h3 class="titleArticle">Parámetros de procesamiento</h3>
+              <p class="parrafo">
+                En RxLive podrá encontrar los parámetros de 
+                procesamiento, aquí podrá encontrar cada configuración que puede realizar para 
+                el pre y postprocesamiento.
+              </p>
+              <div class="verMas"><a href="./pages/parametros.html">Ver más</a></div>
+            </div>
+          </article>
+          <article class="cardTopLeidos">
+            <figure>
+              <img src="./images/exporta.jpg" width="130" height="130" alt="Imagen top más" />
+            </figure>
+            <div class="topLeidosText">
+              
+              <h3 class="titleArticle">Exportación de archivos </h3>
+              <p class="parrafo">
+                Aquí encontrara todos los formatos 
+                disponibles para exportar sus imágenes
+              </p>
+              <div class="verMas"><a href="./pages/Export.html">Ver más</a></div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <section id="contact">
+          <figure>
+            <img src="./images/Logo.png" alt="Logo" />
+          </figure>
+          <p id="contact-email">
+            <span>Contactanos a:</span>
+            <br />
+            <strong>hidalgo-laura@javeriana.edu.co</strong>
+          </p>
+          
+        </section>
+        <div id="copy">
+          <p id="author-policy">
+            Pontificia Universidad Javeriana
+          </p>
+          <span>&nbsp;|&nbsp;</span>
+          <p>&copy; 2022 Laura Valentina Hidalgo Palencia</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
