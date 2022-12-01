@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataPlenoptic/ Exportación de archivos  </title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <figure>
+            <img src="../images/logo.png" alt="Logo" />
+          </figure>
+        </a>
+        <div class="btn-group">
+          <button
+            id="responsive-menu"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="hamburger-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end height-auto navigator">
+            <li><a href="../pages/explora.html">Explora</a></li>
+            <li><a href="../pages/tutoriales.html">Tutoriales</a></li>
+            <li><a href="../pages/resultados.html">Resultados</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a class="menu" href="../pages/explora.html">Explora</a></li>
+          <li><a class="menu" href="../pages/tutoriales.html">Tutoriales</a></li>
+          <li><a class="menu" href="../pages/resultados.html">Resultados</a></li>
+          <li><a class="menu" href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titlePage">Exportación de archivos  </h1>
+      <div class="parrafo">
+
+        <p>A continuación, se explica un poco sobre todos los archivos que se pueden exportar </p>
+          
+        <div class="img-container"> 
+          <img src="../images/22.png" alt="model 3d">
+        </div>
+                 
+          <h4 class="subtitlePage"> Archivos de campo de luz </h4>
+        
+          <table class="table" id="eventos">
+            <thead>
+              <tr>
+                <th scope="col">Archivo</th>
+                <th scope="col">Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Ray File</b></td>
+                <td>Imagen Ray que incluye todos los datos en el formato de imagen de ray de raytrix. Esto permite reenfocar m´as tarde y estimar la profundidad
+                  con RxLive o el SDK.</td>
+              </tr>
+              <tr>
+                <td><b>Secuencia</b></td>
+                <td>Imágenes en secuencia en formato Ray</td>
+                
+              </tr>
+              </tbody>
+          </table>
+
+          <h4 class="subtitlePage"> Archivos tipo imágenes </h4>
+        
+          <table class="table" id="eventos">
+            <thead>
+              <tr>
+                <th scope="col">Archivo</th>
+                <th scope="col">Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Raw image</b></td>
+                <td> Imagen sin procesar que contiene las imágenes de microlentes
+                  sin procesar</td>
+              </tr>
+              <tr>
+                <td><b>Processed Image</b></td>
+                <td>Imagen Raw procesada. Dependiendo de su configuración,
+                  se aplican filtros de mejora de imagen y la imagen gris.</td>
+                
+              </tr>
+              <tr>
+                <td><b>Multiview Image</b></td>
+                <td> Imagen estéreo</td>
+              </tr>
+              <tr>
+                <td><b>Calibration Grid</b></td>
+                <td>  Imagen Raw y cuadrícula MLA virtual trazada en ella</td>
+              </tr>
+              <tr>
+                <td><b>Gray Image</b></td>
+                <td> Imagen de grises utilizada para eliminar el viñeteado en el paso
+                  de preprocesamiento</td>
+              </tr>
+              <tr>
+                <td><b>Total Focus</b></td>
+                <td> Imagen a la cual se le aplica una estimación de profundidad y
+                  el enfoque se establece por píxel.</td>
+              </tr>
+              <tr>
+                <td><b>Total Focus (Orthographic) </b></td>
+                <td> Esta imagen combina el conocimiento de la
+                  cáamara de campo de luz calibrada y la estimación de profundidad sin procesar, cada píxel se puede proyectar desde la imagen procesada a un espacio
+                  métrico en 3D. Con esta información se puede determinar el color correcto
+                  para cada píxel. Se puede sintetizar una vista de cáamara virtual a partir de
+                  esta escena para producir una vista como si la escena fuera capturada por
+                  una lente telecéntrica</td>
+              </tr>
+              <tr>
+                <td><b> Colored Depth Map</b></td>
+                <td>Mapa de profundidad codificado con colores falsos</td>
+              </tr>
+              <tr>
+                <td><b>Colored Depth Map (Orthographic)</b></td>
+                <td>  El mapa de profundidad de color muestra un mapa de profundidad de color falso. Las variaciones de profundidad
+                  se representan mediante un degradado de color.</td>
+              </tr>
+              <tr>
+                <td><b>Basic Refocus</b></td>
+                <td>Una imagen donde un plano específico está enfocado.
+                </td>
+              </tr>
+              </tbody>
+          </table>
+
+          <div class="img-container"> 
+            <img src="../images/27.png" alt="model 3d">
+          </div>
+                   
+            <h4 class="subtitlePage"> Archivos de profundidad </h4>
+
+            <table class="table" id="eventos">
+              <thead>
+                <tr>
+                  <th scope="col">Archivo</th>
+                  <th scope="col">Descripción</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>3D Depth Image</b></td>
+                  <td> Archivo .tiff donde para cada píxel puede encontrar x (mm)
+                    en el canal rojo, y (mm) en el canal verde y z (mm) en el canal azul</td>
+                </tr>
+                <tr>
+                  <td><b>3D Reference Depth Image</b></td>
+                  <td>Posición X,Y,Z en el espacio de referencia por
+                    píxel</td>
+                  
+                </tr>
+                <tr>
+                  <td><b>Colored Raw Depth Map</b></td>
+                  <td> Los sofisticados algoritmos de Raytrix proporcionan una estimación de profundidad inicial rápida y sólida utilizando el
+                    conocimiento de nuestro modelo de cámara de campo de luz. La estimación
+                    de profundidad sin procesar permite todos los pasos de procesamiento posteriores.
+                    </td>
+                </tr>
+                <tr>
+                  <td><b>Depth Map:</b></td>
+                  <td>  .tiff, donde para cada píxel puede encontrar z (mm) como valor
+                    de 16 bits.</td>
+                </tr>
+                
+                <tr>
+                  <td><b>Depth Map (Orthographic)</b></td>
+                  <td> El mapa de profundidad de color muestra un
+                    mapa de profundidad de color falso. Las variaciones de profundidad se representan mediante un degradado de color.</td>
+                </tr>
+                <tr>
+                  <td><b>Raw Depth Map </b></td>
+                  <td> Estimación de profundidad sin procesar tras estimación sin
+                    fusible.
+                    </td>
+                </tr>
+              
+                </tbody>
+            </table>
+
+            <h4 class="subtitlePage"> Archivos de datos </h4>
+
+            <table class="table" id="eventos">
+              <thead>
+                <tr>
+                  <th scope="col">Archivo</th>
+                  <th scope="col">Descripción</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>3D Mesh (PLY)</b></td>
+                  <td> Crea una malla a partir de un mapa 3D que contiene informaci´on de color de su imagen Total Focus. Contiene una textura.</td>
+                </tr>
+                <tr>
+                  <td><b>3D Mesh (STL)</b></td>
+                  <td>Construye una malla a partir de un mapa 3D. No contiene
+                    textura.</td>
+                  
+                </tr>
+                <tr>
+                  <td><b>3D Points (PCD)</b></td>
+                  <td> Exporta los valores de profundidad estimados en un archivo .PCD (datos de nube de puntos). Estos archivos se pueden ver con
+                    herramientas externas (por ejemplo, Meshlab). Contiene una textura.
+                    </td>
+                </tr>
+                <tr>
+                  <td><b>3D Points (XYZ)</b></td>
+                  <td> Exporta los valores de profundidad estimados en un archivo de texto. Estos archivos se pueden ver con herramientas externas (por
+                    ejemplo, Meshlab)</td>
+                </tr>
+                
+                <tr>
+                  <td><b>Calibration File</b></td>
+                  <td> Archivo XML que contiene la calibración de la cámara.</td>
+                </tr>
+                
+              
+                </tbody>
+            </table>
+  
+
+          <br>
+          <br>
+          <br>
+    
+          
+      </div>
+      
+    </main>
+    <footer>
+      <div class="wrapper">
+        <section id="contact">
+          <figure>
+            <img src="../images/logo.png" width="200" height="150" alt="Logo" />
+          </figure>
+          <p id="contact-email">
+            <span>Contactanos a:</span>
+            <br />
+            <strong>hidalgo-laura@javeriana.edu.co</strong>
+          </p>
+          
+        </section>
+        <div id="copy">
+          <p id="author-policy">
+            Pontificia Universidad Javeriana
+          </p>
+          <span>&nbsp;|&nbsp;</span>
+          <p>&copy; 2022 Laura Valentina Hidalgo Palencia</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
+

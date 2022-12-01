@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataPlenoptic/ Vistas</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <figure>
+            <img src="../images/logo.png" alt="Logo" />
+          </figure>
+        </a>
+        <div class="btn-group">
+          <button
+            id="responsive-menu"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="hamburger-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end height-auto navigator">
+            <li><a href="../pages/explora.html">Explora</a></li>
+            <li><a href="../pages/tutoriales.html">Tutoriales</a></li>
+            <li><a href="../pages/resultados.html">Resultados</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a class="menu" href="../pages/explora.html">Explora</a></li>
+          <li><a class="menu" href="../pages/tutoriales.html">Tutoriales</a></li>
+          <li><a class="menu" href="../pages/resultados.html">Resultados</a></li>
+          <li><a class="menu" href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titlePage">Vistas </h1>
+      <div class="parrafo">
+        
+          <p style = width:100%> 
+            Después de conectar la cámara y seleccionarla le aparecerá la página principal de raytrix, la cual 
+            es considerada como la más importante puesto que desde aquí podrá manejar la cámara, realizar las 
+            configuraciones necesarias, así como la calibración (MLA, calibración métrica y extrínseca) y la 
+            exportación de sus archivos.    
+            </p>
+            <div class="img-container"> 
+              <img src="../images/pestañas.jpg" width="600" height="300" alt="Pestañas">
+            </div>
+          <p style = width:100%>
+            En primer lugar, podrá identificar las pestañas, las cuales corresponden a las diferentes vistas 
+            que se tienen del objeto. Dentro de cualquier pestaña usted podrá mover la imagen, así como podrá 
+            acercarla o alejarla todo dependerá de cómo le resulte más sencillo trabajar. Para ingresar a las 
+            vistas ingrese tal y como se muestra continuación:
+            
+          </p>
+          <div class="img-container"> 
+            <img src="../images/pestaña.jpg" width="300" height="250" alt="Pestaña">
+          </div>
+                    
+          <p style = width:100%>
+            Las vistas con las que podrá trabajar son:  
+          </p>
+
+          
+            <h4 class="subtitlePage">• Reenfoque básico (Basic Refocus)  </h4>
+            <p>
+              Esta es la vista estándar y la que muestra de manera predeterminada, en esta vista usted puede 
+              realizar el reeenfoque manualmente utilizando el control deslizante de enfoque.  
+            </p>
+            
+
+          <div class="img-container"> 
+            <img src="../images/basic.jpg" width="600" height="300" alt="Reenfoque basico">
+          </div>
+
+          <h4 class="subtitlePage">•	Enfoque total (Total focus)  </h4>
+        
+          <p>
+            En esta vista la imagen mostrada depende del mapa de profundidad calculado, asi que para asegurar 
+            un muy buen reenfoque, es importante que tenga buenos mapas de profundidad.  
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/Total.jpg" width="600" height="300" alt="Total focus">
+          </div>
+
+          <h4 class="subtitlePage">•	Vista múltiple (Multiview Image)  </h4>
+        
+          <p>
+            Esta pestaña mostrara su imagen desde diferentes perspectivas  
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/multi.jpg" width="600" height="300" alt="Multiview">
+          </div>
+          
+
+          <h4 class="subtitlePage">•	RAW Image </h4>
+        
+          <p>
+            Aquí podrá encontrar la imagen original que capturo la cámara plenóptica, puede ver los microlentes 
+            y el patrón de Bayer, en esta imagen es posible ver la estructura de microlentes.  
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/raw.jpg" width="600" height="300" alt="Raw">
+          </div>
+          
+          <h4 class="subtitlePage">•	Imagen de grises (Gray Image) </h4>
+        
+          <p>
+            Es la imagen calculada durante la calibración MLA de la cámara y se utiliza para eliminar la 
+            estructura de microlente de la imagen. Esta imagen es tomada con una iluminación homogénea. Esta 
+            imagen se toma para eliminar el viñetado de la imagen.    
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/grey.jpg" width="600" height="300" alt="grey">
+          </div>
+          
+          <h4 class="subtitlePage">•	Imagen procesada (Processed Image) </h4>
+        
+          <p>
+            Aquí puede encontrar la imagen RAW que es una combinación por la imagen de grises que se toma en la 
+            calibración y la debayerada, es decir, la imagen sin procesar de la cámara.  
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/processed.jpg" width="600" height="300" alt="Processed">
+          </div>
+          
+          <h4 class="subtitlePage">•	Mapa de profundidad sin procesar coloreado (Colored Raw Depth Map)  </h4>
+        
+          <p>
+            En esta imagen encontrará el mapa de profundidad en color sin procesar, cada uno de los pixeles de 
+            color representan una medida de profundidad por lo que se sigue la siguiente escala el rojo indica 
+            que está cerca, el verde está a la mitad y el azul representa que está lejos. Estos son los valores 
+            que están predeterminados, pero se puede ir ajustando el rango de profundidad de color modificando 
+            la configuración de planos de profundidad.  
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/rawdepth.jpg" width="600" height="300" alt="Rawdepth">
+          </div>
+          
+          <h4 class="subtitlePage">•	Cuadricula de calibración (Calibration Grid) </h4>
+        
+          <p>
+            Se muestra la imagen procesada con la superposición de la cuadricula MLA, esta se calcula durante 
+            la calibración de MLA y es importante que coincida con las imágenes de microlentes reales.    
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/calibrationgrid.jpg" width="600" height="300" alt="calibrationgrid">
+          </div>
+
+          <h4 class="subtitlePage">•	Mapa de profundidad coloreado (Colored Depth Map)  </h4>
+        
+          <p>
+            En esta vista podrá observar la imagen codificada por colores donde se estima la distancia entre la
+            cámara y el objeto. el rojo indica que está cerca, el verde está a la mitad y el azul representa que 
+            está lejos. Estos son los valores que están predeterminados, pero se puede ir ajustando el rango de 
+            profundidad de color modificando la configuración de planos de profundidad.   
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/coloreddepth.jpg" width="600" height="300" alt="Colored Depth">
+          </div>
+
+          <h4 class="subtitlePage">•	Modelo 3D  (3D Model)  </h4>
+        
+          <p>
+            Combina la imagen de enfoque total con el mapa de profundidad y la calibración métrica, por lo cual 
+            muestra el modelo en tres dimensiones    
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/3dmodel.jpg" width="600" height="300" alt="model 3d">
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          
+      </div>
+      
+    </main>
+    <footer>
+      <div class="wrapper">
+        <section id="contact">
+          <figure>
+            <img src="../images/logo.png" width="200" height="150" alt="Logo" />
+          </figure>
+          <p id="contact-email">
+            <span>Contactanos a:</span>
+            <br />
+            <strong>hidalgo-laura@javeriana.edu.co</strong>
+          </p>
+          
+        </section>
+        <div id="copy">
+          <p id="author-policy">
+            Pontificia Universidad Javeriana
+          </p>
+          <span>&nbsp;|&nbsp;</span>
+          <p>&copy; 2022 Laura Valentina Hidalgo Palencia</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
+

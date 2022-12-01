@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataPlenoptic/ Calibración</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <figure>
+            <img src="../images/logo.png" alt="Logo" />
+          </figure>
+        </a>
+        <div class="btn-group">
+          <button
+            id="responsive-menu"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="hamburger-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end height-auto navigator">
+            <li><a href="../pages/explora.html">Explora</a></li>
+            <li><a href="../pages/tutoriales.html">Tutoriales</a></li>
+            <li><a href="../pages/resultados.html">Resultados</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a class="menu" href="../pages/explora.html">Explora</a></li>
+          <li><a class="menu" href="../pages/tutoriales.html">Tutoriales</a></li>
+          <li><a class="menu" href="../pages/resultados.html">Resultados</a></li>
+          <li><a class="menu" href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titlePage">Calibración de la cámara </h1>
+      <div class="parrafo">
+        
+          <p style = width:100%> 
+            Es muy importante iniciar seleccionando un buen patrón de calibración que vaya de acuerdo con su 
+            aplicación. Aquí se encuentra el diseño del patrón, puede modificarlo e imprimirlo de acuerdo con 
+            su necesidad  
+            </p>
+            <div class="img-container"> 
+              <img src="../images/patron.jpg" width="200" height="300" alt="Cámara">
+            </div>
+          <p style = width:100%>
+            Para comenzar a trabajar con la Raytrix R42 es necesario realizar en primer lugar la calibración 
+            MLA (Micro Lens Array). Para lo cual inicie conectando la cámara al computador y abra la aplicación 
+            RxLive. Los componentes que necesita para la calibración será un filtro de calibración y una fuente 
+            de luz.  
+            
+          </p>
+          <div class="img-container"> 
+            <img src="../images/filtro.jpg" width="200" height="200" alt="Cámara">
+          </div>
+                    
+          <p style = width:100%>
+            Para iniciar la calibración de la cámara plenóptica diríjase al siguiente icono  
+          </p>
+          <div class="img-container"> 
+            <img src="../images/iconocalibracion.jpg" width="400" height="100" alt="pagina principal">
+          </div>
+        
+          <p>
+            Para realizar este proceso se puede apoyar del asistente de calibración de MLA que lo guiara a 
+            través del proceso de calibración  
+          </p>
+
+          <h2 class="titlePage">Calibración de la cámara en modo focal</h2>
+          <h4 class="subtitlePage">Calibración MLA </h4>
+
+          <p>
+            Cuando ingrese a la opción de calibración le aparece una pantalla en donde podrá agregar un lente 
+            nuevo (En caso de agregar uno nuevo debe asegurarse que los valores de distancia focal sean 
+            correctos y revisar si utilizara un lente con distancia focal fija o con distancia focal variable) 
+            o seleccionar alguno existente. Se suele trabajar con el lente HF 1218-12M, 12-12,4mm,f/1.80-2.20 y 
+            puede seleccionar o crear un nuevo perfil de calibración. 
+            Para este caso se creará un perfil de calibración para lo cual se deben realizar los 2 tipos de 
+            calibración para los cuales tiene licencia la universidad (Calibración MLA y la calibración métrica) 
+
+          </p>
+
+          <div class="img-container"> 
+            <img src="../images/calibracion.jpg" width="600" height="300" alt="Pantalla requisitos">
+          </div>
+        
+          <p>
+            Al seleccionar la calibración MLA se le abrirá la siguiente pantalla, en donde usted deberá establecer el focal lenght
+            que siempre sera un valor entre 12mm y 12.4 mm y la distancia focal correctamente, 
+            esta distancia corresponde a la distancia que hay entre el sensor y el plano de enfoque del lente 
+            principal.  
+          </p>
+          <div class="img-container"> 
+            <img src="../images/cal1.jpg" width="600" height="300" alt="Encuntra camara">
+          </div>
+
+          <p>
+            
+            Luego se procede a sacar la imagen de grises la cual será necesaria para eliminar la estructura de 
+            microlentes de las imágenes finales. Durante este paso es necesario utilizar el filtro de luz. 
+            Se debe lograr una imagen muy bien iluminada para lo cual puede ajustar la intensidad de la luz y/o 
+            cambiando el tiempo de obturación. Se debe revisar constantemente el histograma, el cual no debe 
+            mostrar sobreexposicion pero debe alcanzar al menos un 90% de iluminación. 
+
+          </p>
+          <div class="img-container"> 
+            <img src="../images/cal2.jpg" width="600" height="300" alt="Pagina inicio">
+          </div>
+
+        </p>
+        <div class="img-container"> 
+          <img src="../images/cal2.jpg" width="600" height="300" alt="Pagina inicio">
+        </div>
+
+          <p>
+            En este momento es muy importante que no se cambie la apertura o el enfoque después de este paso, 
+            ya que o sino deberá repetir esta calibración y tras finalizar esta calibración de los microlentes 
+            puede quitar el filtro. 
+          </p>
+
+          <h4 class="subtitlePage">Calibración métrica  </h4>
+          <p>
+            Después de realizar la calibración MLA puede continuar con la calibración métrica. Aquí deberá 
+            elegir entre alguno de los dos tipos de calibración disponible (Plane calibration o Box calibration). 
+            En este momento deberá ajustar el iris de la cámara para mantener el nivel de luz adecuado, es muy 
+            importante evitar la subexposición como la sobreexposición para lo cual puede utilizar el siguiente 
+            icono que le indica en rojo las zonas con sobreexposición y en azul las zonas con subexposición. 
+
+            </p>
+
+          </p>
+          <div class="img-container"> 
+            <img src="../images/expo.jpg" width="600" height="300" alt="Pagina inicio">
+          </div>
+          <p>
+            Para este tutorial se realizará la calibración de planos en la cual se toman capturas desde 
+            distintas inclinaciones para evitar la distorsión radial que se puede generar por el lente, para 
+            lo cual el software calcula la ecuación de cada plano. 
+
+          </p>
+          <div class="img-container"> 
+            <img src="../images/cal3.jpg" width="600" height="300" alt="Pagina inicio">
+          </div>
+          <p>
+            En este punto va a realizar el paso mas importante para calibrar la cámara, inicie configurando el 
+            point Pitch en milímetros de manera correcta. Si lo va a medir de manera manual lo recomendable es 
+            que lo mida para 10 puntos y dividir el resultado por 10 para reducir errores. 
+            <br>
+            El software esta diseñado para capturar diferentes valores de profundidad en una imagen. Lo ideal 
+            es que obtenga la profundidad desde el rango azul al rojo en una imagen sin inclinar el patrón más 
+            de 45°. Lo mínimo para obtener un buen resultado son 2 imágenes y para mejorar los resultados es 
+            deseable que la imagen de calibración debe tener una orientación de destino distinta para cada 
+            imagen. El objetivo es cubrir todo el espacio de profundidad. Para cada imagen aparecerá un nuevo 
+            cuadro de color en la vista general de profundidad. Al final deberá tener cuadros de colores en el 
+            rango completo entre el 10% y 90%.
+            <br>
+            Para guardar cada imagen presione el botón de capturar imagen igual puede rechazar imágenes mas 
+            adelante. Cuando la imagen es procesada muestra la superposición con los puntos negros del objetivo. 
+
+          </p>
+          <div class="img-container"> 
+            <img src="../images/cal4.jpg" width="600" height="300" alt="Pagina inicio">
+          </div>
+          <p>
+            Después de re recopilar imágenes a distintas zonas de profundidad, de clic en el botón Calibrate, 
+            tras finalizar saldrá en la sección la evaluación de esta calibración en donde podrá observar 
+            inicialmente la evaluación en estrellas que indica el nivel de precisión que alcanzaste. Sin 
+            embargo, hay ocasiones en las cuales puede terminar con éxito pero no obtener buenos resultados, 
+            por lo cual deberá tener en cuenta que el Point Error deberá ser inferior a 10 veces la distancia 
+            euclidiana media. 
+          </p>
+          <div class="img-container"> 
+            <img src="../images/calif.jpg" width="600" height="300" alt="Pagina inicio">
+          </div>
+      </div>
+      
+    </main>
+    <footer>
+      <div class="wrapper">
+        <section id="contact">
+          <figure>
+            <img src="../images/logo.png" width="200" height="150" alt="Logo" />
+          </figure>
+          <p id="contact-email">
+            <span>Contactanos a:</span>
+            <br />
+            <strong>hidalgo-laura@javeriana.edu.co</strong>
+          </p>
+          
+        </section>
+        <div id="copy">
+          <p id="author-policy">
+            Pontificia Universidad Javeriana
+          </p>
+          <span>&nbsp;|&nbsp;</span>
+          <p>&copy; 2022 Laura Valentina Hidalgo Palencia</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
+
