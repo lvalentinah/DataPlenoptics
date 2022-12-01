@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataPlenoptic/ Explora </title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <figure>
+            <img src="../images/logo.png" alt="Logo" />
+          </figure>
+        </a>
+        <div class="btn-group">
+          <button
+            id="responsive-menu"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="hamburger-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end height-auto navigator">
+            <li><a href="../pages/explora.html">Explora</a></li>
+            <li><a href="../pages/tutoriales.html">Tutoriales</a></li>
+            <li><a href="../pages/resultados.html">Resultados</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a class="menu" href="../pages/explora.html">Explora</a></li>
+          <li><a class="menu" href="../pages/tutoriales.html">Tutoriales</a></li>
+          <li><a class="menu" href="../pages/resultados.html">Resultados</a></li>
+          <li><a class="menu" href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titlePage">Raytrix R42  </h1>
+      <div class="parrafo">
+        
+          <p>La calibración en la cámara plenoptica permite la medición de superficies y volúmenes en 3D, lo que significa que es posible medir la posición en x, y, z para cada punto de la imagen. Lo cual permite la creación de un mapa de profundidad o una nube de puntos del objeto con una resolución lateral de muchos megapíxeles. Sin embargo, las cámaras plenópticas fabricadas por Raytrix brindan la distancia desde la cámara en unidades de profundidad virtual, que no están linealmente relacionadas con las distancias métricas del mundo real. Por lo cual, para permitir una medición métrica precisa, no es suficiente encontrar la relación entre la profundidad virtual y la profundidad métrica. Sino que también es necesario rectificar las posibles distorsiones geométricas del lente principal porque afectarían las medidas.
+            Las cámaras plenópticas Raytrix tienen un MLA directamente en frente del sensor de imagen como se muestra
+            </p>
+            
+ 
+          <div class="img-container"> 
+          <img src="../images/r1.png" alt="model 3d">
+        </div>
+        
+        <p>
+          El plano de cobertura total (TCP) es el plano en el que se debe enfocar el lente principal. Si la proyección del lente principal está más cerca del sensor, no es posible estimar la profundidad. Cuando el MLA se coloca a la distancia correcta del sensor, las microlentes proyectarán pequeñas subimágenes en el sensor. Cada una de estas subimágenes muestra una vista ligeramente diferente del objeto. Cuando un punto del objeto se puede ver en al menos dos subimágenes, se puede estimar la llamada profundidad virtual del punto del objeto. Esta estimación de profundidad funciona de manera similar a los enfoques de visión estéreo.
+Para calcular la profundidad virtual de un punto Pv, para las posiciones i1 e i2 de un par de puntos vistos en dos microlentes se deben conocer los centros de proyección C1 y C2. El modelo estenopeico es suficiente para proyectar los puntos detrás del sensor y en el espacio virtual 3D. La profundidad donde los dos rayos proyectados se cruzarían en el espacio tridimensional es la profundidad virtual v, que corresponde a la distancia del objeto a la cámara
+
+        </p>
+
+        <div class="img-container"> 
+          <img src="../images/ImgArticulos/2.png" alt="model 3d">
+        </div>
+          
+        <p>Estas distancias se miden en la misma dirección desde el plano principal del MLA. Aunque la distancia b es constante pero generalmente no se conoce y a es la distancia métrica de la proyección detrás del MLA que se debe encontrar, todavía es posible calcular la profundidad virtual v Dada la línea base D EntreC1 yC2 y la distancia i1−i2 entre las imágenes de un mismo punto en dos microlentes, la profundidad virtual v se puede calcular con el teorema de la intersección</p>
+        <div class="img-container"> 
+          <img src="../images/ImgArticulos/e.png" alt="model 3d">
+        </div>
+
+        <p>De esta ecuación se deduce que para obtener información métrica sobre la proyección detrás del MLA, la profundidad virtual v y la distancia del MLA al sensor b debe ser conocido Esto significa que el valor de b tiene que ser determinado por este algoritmo de calibración.
+          Una característica única de las cámaras plenópticas Raytrix es el hecho de que son cámaras plenópticas multifoco. Esto significa que hay tres tipos diferentes de microlentes en un MLA, que difieren en su distancia focal. Tal y como se explica en el articulo “Single lens 3D-camera with extended depth-of-field” publicado por Proceedings of SPIE - The International Society for Optical Engineering, en donde se explica que la matriz de micro lentes debe estar conformada por tres subconjuntos de micro lentes hexagonales entrelazados con diferentes tipos de lentes para obtener una buena resolución lateral efectiva máxima alta y la profundidad de campo, lo cual se logra eligiendo correctamente las diferentes distancias focales de estos micro lentes, tal y como se puede observar 
+          </p>
+        <div class="img-container"> 
+          <img src="../images/ImgArticulos/3.png" alt="model 3d">
+        </div>  
+        <p>Lo cual se puede ver más claramente a continuación en donde se puede observar mejor el efecto de las distintas distancias focales de micro lentes en las micro imágenes formadas para diferentes profundidades de objeto, los números 1, 2 y 3 están indicando los diferentes tipos de micro lentes, en donde el tipo de lente 1 es enfocada para objetos cercanos al plano focal del lente principal, mientras que el lente tipo 3 está enfocado para objetos cercanos </p>
+
+        <div class="img-container"> 
+          <img src="../images/ImgArticulos/4.png" alt="model 3d">
+        </div> 
+
+        <p>
+          Tras obtener la imagen generada por la cámara plenóptica, se debe conocer la profundidad correcta del píxel en la imagen sintetizada. Para calcular el valor de color o gris en una posición (x,y) en la imagen sintetizada suponiendo una profundidad virtual v, se aplica el siguiente procesamiento: <br>
+1.	Se selecciona un subconjunto de micro imágenes, es decir, las correspondientes a un plano generada por un tipo de micro lente, que tenga la relación de resolución efectiva (ERR) más alto en la profundidad virtual v, para la figura se está realizando para los microlentes tipo 1. 
+<div class="img-container"> 
+  <img src="../images/ImgArticulos/5.png" alt="model 3d">
+</div> 
+
+
+
+        </p>
+
+        <p>2. Se debe encontrar el conjunto de micro lentes que realmente “ven” el punto (x,y). Estos son todos los micro lentes cuyos centros caen dentro del círculo de radio R_max sobre la proyección ortográfica de (x,y) sobre el plano del microlente.</p>
+        <p>
+          3.	Para cada uno de estos micro lentes se calcula la posición del pixel en el plano de la imagen en el que se encuentra el punto (x,y), es proyectado por el respectivo micro lente. <br>
+4.	El valor del color final es un promedio ponderado de los valores de color en el plano de la imagen en las posiciones de píxel calculadas en el paso anterior. La ponderación se puede tomar de los datos de calibración que dan la cantidad de atenuación de intensidad en cada una de las posiciones de pixel para la proyección del punto (x,y,z). 
+
+        </p>
+
+        <p>Si la profundidad virtual se elige incorrectamente en un punto, la imagen sintetizada mostrara errores. Para obtener una imagen final con una profundidad de campo aparentemente reducida, primero se debe sintetizar una imagen con los valores correctos de profundidad virtual y luego se aplica un desenfoque a la imagen dependiendo de la distancia local entre la profundidad virtual correcta y la deseada. 
+          <br>
+          En algunas cámaras plenópticas la estimación de profundidad se realiza mediante triangulación. Como la distancia y la orientación de los micro lentes son fijos y se supone que se conocen, se puede realizar una estimación de la profundidad en términos de la profundidad virtual sin necesidad de una calibración 3D del sistema. 
+          <br>
+          Antes de realizar el proceso de triangulación se debe saber que píxel de las micro imágenes vecinas son imágenes del mismo punto del objeto. Esto se puede hacer calculando, por ejemplo, la correlación o la suma de las diferencias absolutas (SAD) a lo largo de las líneas epipolares de micro pares de imágenes, de la misma manera que los enfoques de cámara estéreo estándar. Por lo cual la triangulación solo se hace en lugares con contraste de imagen local, es decir, en bordes, esquinas u otras estructuras. Una vez que se conoce la profundidad de los pixeles en las micro imágenes, la imagen de profundidad final se puede sintetizar. 
+          <br>
+          Cuanto mayor sea el campo de profundidad de una cámara plenóptica, mayor será el rango en el que se puede calcular la profundidad de la escena, ya que se necesitan micro imágenes nítidas. 
+          <br>
+          Volviendo a lo anterior Raytrix para evitar las diferencias de profundidad que puede existir entre los 3 planos generados por cada micro lente propone un modelo en donde no asumirá la distancia b entre el MLA y el sensor, en su lugar tomará tres diferentes valores b_i  donde i=1…3 correspondiente a los tres tipos diferentes de micro lentes, En la figura se muestra una representación gráfica del modelo propuesto.
+        </p>
+        <div class="img-container"> 
+          <img src="../images/ImgArticulos/6.png" alt="model 3d">
+        </div>
+        <p>
+          Seguido de lo anterior se realiza la proyección de profundidad virtual a profundidad métrica, para lo cual se explica el proceso de rectificación de distorsión  radial y de profundidad, además de que proponen un modelo para la inclinación y desplazamiento del lente 3D, describiendo la pose 3D completa ( posición y orientación) del lente principal en 6 grados de libertad, algunos de los parámetros que tienen en cuenta son la dirección del eje óptico del lente inclinado así como también el desplazamiento del lente principal en relación con el centro del sensor. <br>
+          Por otro lado, para calibrar una cámara se utiliza algún tablero de ajedrez con geometría conocida sin embargo no funciona para las cámaras plenópticas ya que hay estructuras similares en la imagen, lo que genera que cuando del borde del tablero de ajedrez se alinea paralelo a una línea epipolar de las micro lentes, no se obtiene una estimación de profundidad confiable. El algoritmo utilizado por la cámara plenóptica Raytrix para si calibración métrica se puede observar a continuación:
+        </p>
+        <div class="img-container"> 
+          <img src="../images/ImgArticulos/7.png" alt="model 3d">
+        </div>
+
+          <br>
+          <br>
+          <br>
+    
+          
+      </div>
+      
+    </main>
+    <footer>
+      <div class="wrapper">
+        <section id="contact">
+          <figure>
+            <img src="../images/logo.png" width="200" height="150" alt="Logo" />
+          </figure>
+          <p id="contact-email">
+            <span>Contactanos a:</span>
+            <br />
+            <strong>hidalgo-laura@javeriana.edu.co</strong>
+          </p>
+          
+        </section>
+        <div id="copy">
+          <p id="author-policy">
+            Pontificia Universidad Javeriana
+          </p>
+          <span>&nbsp;|&nbsp;</span>
+          <p>&copy; 2022 Laura Valentina Hidalgo Palencia</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
+

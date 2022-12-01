@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataPlenoptic/ Parametros de procesamiento </title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <figure>
+            <img src="../images/logo.png" alt="Logo" />
+          </figure>
+        </a>
+        <div class="btn-group">
+          <button
+            id="responsive-menu"
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="hamburger-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end height-auto navigator">
+            <li><a href="../pages/explora.html">Explora</a></li>
+            <li><a href="../pages/tutoriales.html">Tutoriales</a></li>
+            <li><a href="../pages/resultados.html">Resultados</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a class="menu" href="../pages/explora.html">Explora</a></li>
+          <li><a class="menu" href="../pages/tutoriales.html">Tutoriales</a></li>
+          <li><a class="menu" href="../pages/resultados.html">Resultados</a></li>
+          <li><a class="menu" href="../pages/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titlePage">Conjuntos de datos y resultados </h1>
+      <div class="parrafo">
+        
+          <p style = width:100%> 
+            Se realizo la construcción de un conjunto de datos muy variado tras poner a prueba las distintas 
+            cámaras disponibles (Raytrix R42, Lytro y BASLER) 
+               
+          
+          <h3 class="subtitlePage"> Rytrix R42 </h3>
+          <p>En primer lugar, se tiene la cámara plenóptica Raytrix, la cual se probó tanto en modo focal como 
+            afocal y con aplicaciones en microscopia para ver y analizar el potencial de esta cámara.</p>
+        
+          <h4 class="subtitlePage"> Modo Focal </h4> 
+          <p>Se hicieron distintas calibraciones con el objetivo de ver que variaciones ocurrían al cambiar la 
+            distancia focal, es decir, la distancia entre el objeto y el sensor, en donde se encontró que la 
+            distancia mínima para calibrar la Raytrix R42 con un lente de 12mm es a una distancia de 48mm y la 
+            distancia máxima a la que es posible capturar imágenes durante la calibración métrica con el patrón 
+            utilizado (180mm por 240mm) es 300mm. Se hicieron también pruebas con patrones de calibración de 
+            distintos tamaños para observar si la elección de este influía en el rango de distancias de trabajo 
+            de la cámara y efectivamente a mayor tamaño del patrón mayor será la distancia a la cual se puede calibrar 
+            la cámara. De acuerdo con Raytrix la distancia máxima de trabajo para esta cámara es 350mm ya que esta 
+            diseñada para la inspección de pines y conectores.</p>
+          <p>El conjunto de datos construido por la cámara en modo focal está compuesto por 15 muestras y para 
+            cada una hay un total de 30 archivos distintos, los cuales se agrupan dependiendo su tipo y estos 
+            son: </p>
+
+
+            <ul>
+              <li>Archivos de campo de luz: Ray File y secuencia</li>
+              <li>Archivos tipo imágenes: Raw image, Processed Image, Multiview Image, Calibration Grid, Gray 
+                Image, Total Focus, Total Focus (Orthographic) Colored Depth Map, Colored Depth Map 
+                (Orthographic) y Basic Refocus</li>
+              <li>Archivos de profundidad: 3D Depth Image, 3D Reference Depth Image, Colored Raw Depth Map, 
+                Depth Map, Depth Map (Orthographic) y Raw Depth Map</li>
+              <li>Archivos de datos: 3D Mesh (PLY), 3D Mesh (STL), 3D Points (PCD), 3D Points (XYZ) y 
+                Calibration File</li>  
+            </ul>
+            <p>Para conocer más a detalle sobre estos archivos puede ingresar a la sección de tutoriales y a exportación de archivos.</p>
+            <p>A continuación, se muestran algunos ejemplos para una de las muestras:</p>
+
+            <div class="img-container"> 
+              <img src="../images/muestras.png" alt="Raw">
+            </div>
+
+          <p>No fue posible realizar la calibración en modo afocal, ya que para lograr capturar imagen fue necesario para el montaje quitar el lente de 12mm. Sin embargo al momento de realizar la primera calibración MLA se debe utilizar el filtro de luz para eliminar correctamente la estructura de los micro lentes de la imagen, sin el lente de la cámara no es posible realizarlo ya que si se calibra sin este filtro queda la imagen que se tome en la calibración congelada e invirtiendo los colores y haciendo imposible visualizar imagen con la cámara además de que por otro lado es muy complicado ajustar la apertura de la cámara y el ´único parámetro que se puede mover por software es el shutter. Se intento realizar esta calibración utilizando el lente de 12mm hasta pasar la calibración de blancos con el filtro de luz sin embargo al quitarlo la iluminación cambia totalmente, se necesita hacer nuevamente el ajuste de la apertura ya que se hace visible la estructura de los micro lentes tal y como se puede observar a continuación</p>
+          <div class="img-container"> 
+            <img src="../images/microlentes.png" alt="Raw">
+          </div>
+          <p>Y si se desea por otro lado continuar con la calibración sin ajustar correctamente la apertura y seguir con la calibración métrica, el software mismo impide continuar ya que no puede mostrar imagen en el total focus y por lo cual es imposible tomar las fotografías variando la profundidad tal y como se muestra a continuación: </p>
+           
+          <div class="img-container"> 
+            <img src="../images/30.png" alt="Raw">
+          </div>
+
+          <p>La cámara Raytrix R42 es extremadamente sensible a cambios en la iluminación y los mejores resultados se obtuvieron utilizando luz natural que artificial, ya que esta puede en ocasiones genera sombra y la cámara puede tomarla como el objeto que se quiere reconstruir.</p>
+          
+          <h4 class="subtitlePage"> Modo Afocal </h4> 
+
+          <p>El montaje realizado para fotografía en modo afocal con el microscopio no funciono debido a que cuando se acerca demasiado la cámara al ocular del microscopio muestra imagen en el basic refocus pero deja de capturar imagen para el total focus, el cual es necesario para realizar la calibración. </p>
+          <div class="img-container"> 
+            <img src="../images/18.png" alt="Raw">
+          </div>
+
+          <p>Si por otro lado se intenta alejar un poco la cámara del ocular es prácticamente imposible lograr enfocar el objeto de estudio, ya que la cámara busca enfocar las partes que componen el lente y no lo que hay más allá, tal y como se puede observar a continuación</p>
+          <div class="img-container"> 
+            <img src="../images/pafocal.png" alt="Raw">
+          </div>
+
+          <h3 class="subtitlePage"> BASLER SCA640-70FC</h3>
+
+          <p>La cámara BASLER permitió la toma de fotografías desde la magnificación más baja que es de 3.5 a la magnificación máxima que fue de 22.5, en este caso fue necesario encontrar muestras de tamaño mili para ver el efecto de los lentes del microscopio y algunos de los resultados obtenidos se pueden observar a continuación: </p>
+
+          <p>Si por otro lado se intenta alejar un poco la cámara del ocular es prácticamente imposible lograr enfocar el objeto de estudio, ya que la cámara busca enfocar las partes que componen el lente y no lo que hay más allá, tal y como se puede observar a continuación</p>
+          <div class="img-container"> 
+            <img src="../images/basler.png" alt="Raw">
+          </div>
+          
+          <h3 class="subtitlePage"> Lytro</h3>
+          <p>De manera afocal no fue posible obtener resultados ya que detectaba la profundidad del ocular y no del objeto visto a través del microscopio por lo cual se tomaron distintas fotografías de modo focal, se obtuvo el mapa de profundidad utilizando el software propio del fabricante, se realizo el procesamiento de este en Matlab y se hallo el mapa de profundidad a partir de las imágenes tomadas en Python. 
+           </p>
+           <div class="img-container"> 
+            <img src="../images/65.png" alt="Raw">
+          </div>
+          <p>Cabe resaltar que los mejores mapas de profundidad se obtuvieron de imágenes con mucha textura y color. </p>
+
+
+
+          <br>
+          <br>
+    
+          
+      </div>
+      
+    </main>
+    <footer>
+      <div class="wrapper">
+        <section id="contact">
+          <figure>
+            <img src="../images/logo.png" width="200" height="150" alt="Logo" />
+          </figure>
+          <p id="contact-email">
+            <span>Contactanos a:</span>
+            <br />
+            <strong>hidalgo-laura@javeriana.edu.co</strong>
+          </p>
+          
+        </section>
+        <div id="copy">
+          <p id="author-policy">
+            Pontificia Universidad Javeriana
+          </p>
+          <span>&nbsp;|&nbsp;</span>
+          <p>&copy; 2022 Laura Valentina Hidalgo Palencia</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
+
